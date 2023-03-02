@@ -15,11 +15,12 @@ document.getElementById('MS').innerHTML = MS + ' ms'
 }
 
 function setSeconde(){
-    is (S == 59){
+    if (S == 59){
         S = 0
+        
     }
     S += 1
-document.getElementById('S').innerHTML = S+' s'    
+document.getElementById('S').innerHTML = S +' s'    
 }
 
 function setMinute(){
@@ -27,7 +28,7 @@ function setMinute(){
         M = 0
     }
     M += 1
-document.getElementById('M').innerHTML = M+' min' 
+document.getElementById('M').innerHTML = M +' min' 
 }
 
 
@@ -42,7 +43,14 @@ function stop (){
     clearInterval (intervalSeconde)
     clearInterval (intervalMiliseconde)   
 }
+
+
 function reset (){
     stop()
-    
+    M = 0
+    S = 0
+    MS = 0
+    document.getElementById('M').innerHTML = M+' 0 min'
+    document.getElementById('S').innerHTML = S+' 0 s'
+    document.getElementById('MS').innerHTML = MS + ' 0 ms'
 }
