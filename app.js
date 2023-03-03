@@ -1,4 +1,4 @@
-
+document.write('<script type="text/javascript" src="chrono.js"></script>');
 
 function shuffleChildren(parent){
 
@@ -57,7 +57,8 @@ for (let i = 1; i <= nbBox; i++){
             if (nb == board.children.length){ // Si nb est égal au nombres de boîtes du jeu -> victoire du joueur.
                 board.querySelectorAll(".box").forEach(function(box){
                     showReaction("sucess", box)
-                })   
+                    stopChrono()   
+                })
             }
 
             nb ++// <--- Incrémentation de la variable "nb" lors de la validation des conditions lors du clic.
@@ -73,7 +74,7 @@ for (let i = 1; i <= nbBox; i++){
             shuffleChildren(board)
         }
 
-        else { // Si le joueur clique sur une boîte déjà validée, un message s'affiche alors mais le jeu ne redémarre pas.
+        else { //  le joueur clique sur une boîte déjà validée, un message s'affiche alors mais le jeu ne redémarre pas.
             showReaction("notice", newbox)
         }
     })
@@ -81,3 +82,6 @@ for (let i = 1; i <= nbBox; i++){
 
 shuffleChildren(board)
 
+document.addEventListener("DOMContentLoaded", function(){
+    startChrono()
+})
