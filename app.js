@@ -47,7 +47,7 @@ for (let i = 1; i <= nbBox; i++){
     newbox.addEventListener("click", function(){
         //"addEventListener" méthode qui associe un évènement à tout élément du DOM.
 
-        console.log("Boite n°"+ i +", click !")
+        console.log("Boite n°"+ i +", click !") // Affichage d'un message dans la console du navigateur.
         // newbox.classList.add("box-valid")
 
         if (i == nb){ // On check si la condition est validée. 
