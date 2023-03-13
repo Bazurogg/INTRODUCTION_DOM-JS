@@ -23,6 +23,7 @@ span {
 .panelcmd{
     display: flex;
     justify-content: center;
+    margin-left: 120px;
 }
 
 .squaretime{
@@ -40,13 +41,14 @@ span {
     margin-left: 20px;
 }
 
-#button-reset{
+#reset-button{
     padding: 10px;
     font-size: 20px;
     color: blanchedalmond;
     background-color: rgb(99, 86, 65);
     border-radius: 5px;
     border: solid 2px blanchedalmond;
+    visibility: hidden;
 }
 
 

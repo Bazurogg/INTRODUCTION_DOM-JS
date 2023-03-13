@@ -27,12 +27,21 @@ function showReaction(type, clickedBox){
 
 }
 
+
 const box = document.createElement("div")
 //"creatElement" méthode qui va instancier un nouvel obbjet HTMLElement, représenté par la balise placée en argument "()" de cette méthode.
 
 box.classList.add("box")
 
 const board = document.querySelector("#board")
+
+const resetButton = document.getElementById('reset-button')
+
+resetButton.addEventListener('click', function() {
+
+    location.reload()
+
+})
 
 let nb = 1 //On déclare la Variable qui correspond au nb de la boîte attendue qui s'incrémentera lors d'un clic valide via ligne 47.
 let nbBox = parseInt(prompt("Entrez un nombre"))
@@ -57,7 +66,8 @@ for (let i = 1; i <= nbBox; i++){
             if (nb == board.children.length){ // Si nb est égal au nombres de boîtes du jeu -> victoire du joueur.
                 board.querySelectorAll(".box").forEach(function(box){
                     showReaction("sucess", box)
-                    stopChrono()   
+                    stopChrono()
+                    resetButton.style.visibility = 'visible'   
                 })
             }
 
