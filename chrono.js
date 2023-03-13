@@ -20,7 +20,7 @@ function setSeconde(){
         
     }
     S += 1
-document.getElementById('S').innerHTML = S +' s'    
+document.getElementById('S').innerHTML = S +' sec'    
 }
 
 function setMinute(){
