@@ -71,7 +71,7 @@ span {
     line-height: 220px;
     margin: 5px;
     animation: appear 1s;
-    border-radius: 6px;
+    border-radius: 17px;
     cursor: pointer;
     transition: background-color 0.8s, transform 0.8s;
     font-family: 'Rampart One', cursive;
