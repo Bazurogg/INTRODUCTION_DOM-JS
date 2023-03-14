@@ -37,6 +37,9 @@ const board = document.querySelector("#board")
 
 const resetButton = document.getElementById('reset-button')
 
+const tommyStrip = document.getElementById('tommystrip')
+const timmyStrip =document.getElementById('timmystrip')
+
 resetButton.addEventListener('click', function() {
 
     location.reload()
@@ -67,7 +70,10 @@ for (let i = 1; i <= nbBox; i++){
                 board.querySelectorAll(".box").forEach(function(box){
                     showReaction("sucess", box)
                     stopChrono()
-                    resetButton.style.visibility = 'visible'   
+                    resetButton.style.visibility = 'visible'
+                    tommyStrip.style.visibility = 'visible'
+                    timmyStrip.style.visibility = 'visible'
+
                 })
             }
 

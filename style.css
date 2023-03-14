@@ -8,9 +8,6 @@
 
 body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    
     background-image: url(/Assets/animalcrossing_BG_05.jpg);
 }
 
@@ -18,6 +15,13 @@ span {
     color: rgb(67, 60, 49);
     font-size: 60px;
     font-family: 'Sacramento', cursive;  
+}
+
+.gameboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
 }
 
 .panelcmd{
@@ -41,6 +45,23 @@ span {
     margin-left: 20px;
 }
 
+.stripcontainer{
+    margin-left: 100px;
+}
+
+.stripcontainer02{
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+#tommystrip{
+    visibility:hidden;
+}
+
+#timmystrip{
+    visibility: hidden;
+}
+
 #reset-button{
     padding: 10px;
     font-size: 20px;
@@ -49,6 +70,7 @@ span {
     border-radius: 5px;
     border: solid 2px blanchedalmond;
     visibility: hidden;
+    cursor: pointer;
 }
 
 
